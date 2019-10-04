@@ -1,40 +1,52 @@
 {
-	"name": "vue-restricted-access",
-	"version": "0.1.0",
-	"description": "Fully customizable Vue package to restrict access to elements on page",
-	"main": "./dist/vue-restricted-access.common.js",
-	"private": false,
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/preetishhs/vue-restricted-access.git"
-	},
-	"author": "Preetish HS <preetishhs24@gmail.com> (https://preetish.in/)",
-	"scripts": {
-		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build",
-		"lint": "vue-cli-service lint",
-		"test:unit": "vue-cli-service test:unit",
-		"build-bundle": "vue-cli-service build --target lib -name vue-restricted-access ./src/index.js"
-	},
-	"devDependencies": {
-		"core-js": "^2.6.5",
-		"vue": "^2.6.10",
-		"@vue/cli-plugin-babel": "^3.11.0",
-		"@vue/cli-plugin-eslint": "^3.11.0",
-		"@vue/cli-plugin-unit-jest": "^3.11.0",
-		"@vue/cli-service": "^3.11.0",
-		"@vue/eslint-config-prettier": "^5.0.0",
-		"@vue/test-utils": "1.0.0-beta.29",
-		"babel-core": "7.0.0-bridge.0",
-		"babel-eslint": "^10.0.1",
-		"babel-jest": "^23.6.0",
-		"eslint": "^5.16.0",
-		"eslint-plugin-prettier": "^3.1.0",
-		"eslint-plugin-vue": "^5.0.0",
-		"node-sass": "^4.9.0",
-		"prettier": "^1.18.2",
-		"sass-loader": "^7.1.0",
-		"vue-template-compiler": "^2.6.10"
-	}
+  "name": "vue-restricted-access",
+  "version": "0.2.1",
+  "description": "Fully customizable Vue package to restrict access to elements on page",
+  "main": "dist/vue-restricted-access.umd.js",
+  "unpkg": "dist/vue-restricted-access.umd.min.js",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/preetishhs/vue-restricted-access.git"
+  },
+  "keywords": [
+    "javascript",
+    "vue",
+    "restrict vue component",
+    "vue-restricted-access",
+    "vue-component",
+    "lock vue element"
+  ],
+  "author": "Preetish HS <preetishhs24@gmail.com> (https://preetish.in/)",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit",
+    "build:npm": "vue-cli-service build --target lib --name vue-restricted-access src/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10",
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-eslint": "^3.11.0",
+    "@vue/cli-plugin-unit-jest": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.9.0",
+    "prettier": "^1.18.2",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
+  }
 }

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="wrapper">
-      <restricted-access :restricted="true" :config="config">
+      <restricted-access :restricted="true">
         <div slot="custom-message">
           hello world
         </div>
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import RestrictedAccess from './RestrictedAccess.vue'
+import RestrictedAccess from '../dist/vue-restricted-access.umd.min.js'
 export default {
   name: 'app',
   components: {

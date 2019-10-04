@@ -5,10 +5,10 @@
   >
     <div
       class="restricted-access__message"
-      v-if="!config.customStatusBox || !config.showStatusText"
+      v-if="!config.customStatusBox && !config.showStatusText"
     >
-      <div class="lock">&#128274;</div>
-      <div class="status-text">
+      <div v-if="config.showLock !== false" class="lock">&#128274;</div>
+      <div class="status-text" :style="{ color: config.statusTextColor }">
         {{ config.statusText }}
       </div>
     </div>
@@ -27,7 +27,10 @@
     >
       <div
         class="restricted-overlay"
-        :style="{ 'background-color': config.backgroundColor }"
+        :style="{
+          'background-color': config.backgroundColor,
+          opacity: config.opacity
+        }"
       ></div>
       <slot v-if="config.strict !== true" />
     </div>
@@ -38,20 +41,24 @@
 </template>
 <script>
 export default {
+  name: 'vue-restricted-access',
   props: {
     restricted: {
       required: true,
       type: Boolean
     },
-    config: {
+    settings: {
       required: false,
+      type: Object,
       default: () => {}
     }
   },
   computed: {
+    config() {
+      return this.settings === undefined ? {} : this.settings
+    },
     itemStyles() {
       return {
-        opacity: this.config.opacity,
         filter: `blur(${this.config.blur}px)`
       }
     }
@@ -83,10 +90,14 @@ export default {
   filter: blur(4px);
   opacity: 0.5;
   &.strict-mode {
-    min-height: 100px;
+    min-height: 150px;
     width: 100%;
     height: 100%;
   }
+}
+.lock {
+  font-size: 35px;
+  padding-bottom: 5px;
 }
 .restricted-overlay {
   position: absolute;
@@ -101,6 +112,7 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 4;
   &.center {
     display: flex;
     align-items: center;
