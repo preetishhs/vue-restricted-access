@@ -1,8 +1,15 @@
 {
 	"name": "vue-restricted-access",
 	"version": "0.1.0",
+	"description": "Fully customizable Vue package to restrict access to elements on page",
 	"main": "./dist/vue-restricted-access.common.js",
 	"private": false,
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/preetishhs/vue-restricted-access.git"
+	},
+	"author": "Preetish HS <preetishhs24@gmail.com> (https://preetish.in/)",
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
